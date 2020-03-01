@@ -2,6 +2,9 @@ package com.automation.tests.day2;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class BasicNavigation {
     public static void main(String[] args)  throws Exception{
@@ -9,8 +12,12 @@ public class BasicNavigation {
         //set-up web driver(browser driver) and create web-driver object.
 
         WebDriverManager.chromedriver().setup();
+
         ChromeDriver driver = new ChromeDriver();
+
        // RemoteWebDriver driver = new ChromeDriver();
+       // RemoteWebDriver driver2 = new SafariDriver();
+       // RemoteWebDriver driver3 = new InternetExplorerDriver();
 
         //In selenium everything starts from WebDriver Interface
         //ChromeDriver is a class. We have to import WebDriverManager and ChromeDriver
