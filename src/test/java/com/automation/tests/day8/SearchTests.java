@@ -27,11 +27,50 @@ public class SearchTests {
             if(!var.isEmpty()){
                 System.out.println(var);
                 //verify that every search result contains java
+                //is some of search results doesn't contain java word, it will fail the test
                 Assert.assertTrue(var.toLowerCase().contains("java"));
             }
 
         }
     }
+
+    /*
+     * Given user is on amazon.com page
+     * when user enters "java' as a search item
+     * //then user clicks on the search button
+     * clicks on the first search item
+     * verifies that title of the search item contains "java"
+     */
+    @Test(description = "Search for java book on Amazon")
+    public void amazonSearchTest(){
+        driver.get("https://www.amazon.com");
+        //there is a chance that item is not visible
+        //so we need to maximize window before clicking it
+        driver.manage().window().maximize();
+        BrowserUtils.wait(2);
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Java", Keys.ENTER);
+        BrowserUtils.wait(3);
+
+        List<WebElement> searchItems = driver.findElements(By.xpath("//h2//a"));
+
+        //click on first item
+        for(WebElement searchItem : searchItems){
+            System.out.println("Title : "+ searchItem.getText());
+        }
+        searchItems.get(0).click();
+        BrowserUtils.wait(2);
+
+        WebElement productTitle = driver.findElement(By.id("title"));
+        String productTitleString  = productTitle.getText();
+        System.out.println(productTitleString);
+
+        Assert.assertTrue(productTitleString.contains("Java"));
+    }
+
+
+
+
+
 
     private WebDriver driver;
     @BeforeMethod
