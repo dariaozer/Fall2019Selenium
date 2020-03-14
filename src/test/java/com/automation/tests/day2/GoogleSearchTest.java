@@ -9,6 +9,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GoogleSearchTest {
     public static void main(String[] args) throws Exception {
+        /*
+1. Get google.com
+2. When text box visible,
+save as web element.
+2.Send text into text box.
+3.When button clickable,
+save as web element
+4.Click on button object
+5. Find element for
+search box and get text
+from it
+
+ */
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("http://google.com");

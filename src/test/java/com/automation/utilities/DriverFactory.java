@@ -9,15 +9,16 @@ public class DriverFactory {
     /**
      * This method returns webdriver object based on browser type
      * if you want to use chrome browser, just provide chrome as a param
+     *
      * @param browserName
      * @return webdriver object.
      */
 
-    public static WebDriver  createDriver(String browserName){
-        if(browserName.equalsIgnoreCase("chrome")){
+    public static WebDriver createDriver(String browserName) {
+        if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().version("79.0").setup();
             return new ChromeDriver();
-        }else{
+        } else {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
         }
