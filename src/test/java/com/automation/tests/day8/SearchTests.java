@@ -20,6 +20,8 @@ public class SearchTests {
         driver.get("http://www.google.com");
         driver.findElement(By.name("q")).sendKeys("java", Keys.ENTER);
         BrowserUtils.wait(2);
+        //since every search item has a tag name <h3>
+        //it's the easiest way to collect all of them
         List<WebElement> searchItems = driver.findElements(By.tagName("h3"));
         for(WebElement searchItem : searchItems){
             String var = searchItem.getText();
@@ -50,7 +52,8 @@ public class SearchTests {
         BrowserUtils.wait(2);
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Java", Keys.ENTER);
         BrowserUtils.wait(3);
-
+//find all links inside h2 elements, because h2 element is no clickable itself
+        //hyperlinks are clickable that why we chose hyperlink here so that we can click.
         List<WebElement> searchItems = driver.findElements(By.xpath("//h2//a"));
 
         //click on first item
@@ -67,7 +70,10 @@ public class SearchTests {
         Assert.assertTrue(productTitleString.contains("Java"));
     }
 
-
+//so h2 elements are not clickable, even though they contain links
+    //that's why, instead of collection all h2 elements
+    //we collected all hyperlinks
+    //every hyperlink represent some search item
 
 
 

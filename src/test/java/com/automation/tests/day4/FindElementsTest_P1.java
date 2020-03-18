@@ -23,7 +23,7 @@ public class FindElementsTest_P1 {
             System.out.println();
 
         }
-        for (int i = 1; i < links.size(); i++) {//her we are skipping HOME link. because it is useless, each time it takes us there
+        for (int i = 1; i < links.size(); i++) {//here we are skipping HOME link. because it is useless, each time it takes us there
             //and we loose the list. To prevent this we opened fori and started with 1 to skip 0.
             links.get(i).click();
             // Thread.sleep(2000);

@@ -9,8 +9,9 @@ import org.openqa.selenium.WebDriver;
 public class XPath_P1 {
 
     static String userNameLocator = "//label[text()='Username']/following-sibling::input";
-    static String passwordLocator ="//label[text()='Password']/following-sibling::input";
-    static String loginBtnLocator ="//button[contains(text(), 'Login')]";
+    static String passwordLocator = "//label[text()='Password']/following-sibling::input";
+    static String loginBtnLocator = "//button[contains(text(), 'Login')]";
+
     //  //button[@type='submit' or @id='wooden_spoon'] --> another way to loacte login button
     //  //button[@type='submit' and @id='wooden_spoon']
     //instead of using locators down, we cretaed static variables of them
