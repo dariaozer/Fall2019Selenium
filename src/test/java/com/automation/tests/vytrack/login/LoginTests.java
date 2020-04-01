@@ -17,7 +17,7 @@ import static org.testng.Assert.*;
 //import org.testng.Assert;
 
 
-public class LoginPageTests {
+public class LoginTests {
     private WebDriver driver;
     private String URL = "https://qa2.vytrack.com/user/login";
     //https is a secured version of http protocol

@@ -30,7 +30,7 @@ public class JSExecutor2 {
         WebElement link = driver.findElement(By.linkText("Multiple Buttons"));
 //        disable this click action ,to perform it with js executor
 //        link.click();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;  // above we made reference type WebDriver that's why we need to cast.
         //after "" you can list webelements that will be used
         //as part of your javascript code
         //it's varargs, so you can list 0+

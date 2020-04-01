@@ -83,6 +83,8 @@ public void verifyDefaultValues(){
     String actualDate = driver.findElement(startDateBy).getAttribute("value"); //input text does not have text it has value
     //thats why we used getAttribute("value);
     Assert.assertEquals(actualDate, expectedDate);
+    System.out.println(expectedDate);
+    System.out.println(actualDate);
 
     String expectedTime = LocalTime.now(ZoneId.of("GMT-7")).format(DateTimeFormatter.ofPattern("h:mm a"));
     String actualTime= driver.findElement(startTimeBy).getAttribute("value");

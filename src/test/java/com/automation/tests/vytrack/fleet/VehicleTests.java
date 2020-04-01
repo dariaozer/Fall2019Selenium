@@ -14,7 +14,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class VehiclePageTests {
+public class VehicleTests {
     private String URL = "https://qa2.vytrack.com/user/login";
     //    CREDENTIALS FOR store manager
     private String username = "storemanager85";

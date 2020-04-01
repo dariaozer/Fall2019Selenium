@@ -34,6 +34,8 @@ public class JSExecutor_P2 {
        // JavascriptExecutor js = (JavascriptExecutor) driver;
         // we need to cast JavascriptExecuter if our driver object reference type is WebDriver
         //Above we changed the reference type to RemoteWebDriver. Therefore, we don't have to cast.
+        //RemoteWebDriver is class --> it implements WebDriver---->
+        //if we use WebDriver
         //RemoteWebDriver is the parent of all types of driver classes.
         //RemoteWebDriver implements both, JavaScriptExecuter Interface and WebDriverInterface.
         //so when we use it as reference type we don't need to cast, as we can acsess all methods that it inherits from
@@ -83,3 +85,5 @@ public class JSExecutor_P2 {
 //driver.executeScript("window.scrollBy(0, 250)");
 //you need to cast if your reference type is webDriver; like this =>  private WebDriver driver;
 //JavascriptExecutor js = (JavascriptExecutor) driver;
+//JavaScriptExeuter---> Example of abstraction in selenium. It has methods, for example--> executeScript with no body
+//implementation is provided in RemoteWebDriver class. If we use WebDriver as reference type than we need to cast.
